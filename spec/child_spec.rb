@@ -4,27 +4,27 @@ require_relative '../child'
 describe Child do
 
   before(:context) do
-    @child = Child.new("ruby",1,"female")
+    @child = Child.new("ruby",1, :female)
   end
 
   describe "Initialization" do
     it "is an instance of the Child class" do
-
+      expect(@child).to be_an_instance_of Child
     end
     it "is assigned a name" do
-
+      expect(@child.name).to eq "ruby"
     end
     it "is assigned an age" do
-
+      expect(@child.age).to eq 1
     end
     it "is assigned a gender" do
-
+      expect(@child.gender).to be :female
     end
     it "is assigned a favColor" do
-
+      expect(@child).to respond_to :favColor
     end
     it "should increment the children variable by 1 when created" do
-
+      expect(@children)
     end
     it "should increment the grandchildren variable by 1 when created" do
 
